@@ -8,6 +8,9 @@ const Input = ({ type, label }: InputInterface) => {
       {(type === InputType.text) && (
         <TextInput />
       )}
+      {(type === InputType.date) && (
+        <DateInput />
+      )}
       {(type === InputType.textarea) && (
         <TextArea />
       )}
@@ -21,6 +24,14 @@ const TextInput = () => {
   return (
     <div>
       <input type="text" />
+    </div>
+  );
+}
+
+const DateInput = () => {
+  return (
+    <div>
+      <input type="date" />
     </div>
   );
 }

@@ -8,5 +8,6 @@ export type InputInterface = {
 export enum InputType {
   textarea,
   text,
-  dropdown
+  dropdown,
+  date
 }
