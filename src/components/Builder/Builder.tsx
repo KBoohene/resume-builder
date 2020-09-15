@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import ResumeBoard from '../ResumeBoard/ResumeBoard';
+import ResumeSections from '../ResumeSections/ResumeSections';
+import SectionsNavbar from '../SectionsNavbar/SectionsNavbar';
 
 const Builder = () => {
-
-  const [state, setState] = useState();
-
   return (
     <div>
       <div className="resume-builder">
-
+        <SectionsNavbar />
+        <ResumeSections />
+        <ResumeBoard />
       </div>
     </div>);
 }
