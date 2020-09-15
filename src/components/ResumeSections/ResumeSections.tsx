@@ -1,8 +1,11 @@
 import React from 'react';
+import ProfileForm from './Profile/ProfileForm';
 
 const ResumeSections = () => {
 
-  return (<div></div>);
+  return (<div>
+    <ProfileForm />
+  </div>);
 }
 
 export default ResumeSections;
