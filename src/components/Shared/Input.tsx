@@ -19,13 +19,15 @@ const Input = ({ type, label }: InputInterface) => {
 
 const TextInput = () => {
   return (
-    <div></div>
+    <div>
+      <input type="text" />
+    </div>
   );
 }
 
 const TextArea = () => {
   return (
-    <textarea name="" id=""></textarea>
+    <textarea name="" id="" />
   );
 }
 
