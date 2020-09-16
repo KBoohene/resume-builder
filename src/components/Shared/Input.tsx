@@ -1,55 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ResumeContext } from '../../contexts/ResumeContext';
 import { InputInterface, InputType } from './Types';
 
 const Input = ({ type, label }: InputInterface) => {
+  const { dispatch } = useContext(ResumeContext);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch({
+      type: 'on_input',
+      payload: e.currentTarget.value,
+    });
+  };
+
   return (
     <div>
       <label htmlFor="">{label}</label>
       {(type === InputType.text) && (
-        <TextInput />
+        <div>
+          <input type="text" onChange={handleChange} />
+        </div>
       )}
       {(type === InputType.date) && (
-        <DateInput />
+        <div>
+          <input type="date" />
+        </div>
       )}
       {(type === InputType.textarea) && (
-        <TextArea />
+        <textarea name="" id="" />
       )}
       {(type === InputType.dropdown) && (
-        <DropDown />
+        <select>
+          <option value=""></option>
+        </select>
       )}
     </div>);
 }
 
-const TextInput = () => {
-  return (
-    <div>
-      <input type="text" />
-    </div>
-  );
-}
-
-const DateInput = () => {
-  return (
-    <div>
-      <input type="date" />
-    </div>
-  );
-}
-
-const TextArea = () => {
-  return (
-    <textarea name="" id="" />
-  );
-}
-
-const DropDown = () => {
-  return (
-    <div>
-      <select>
-        <option value=""></option>
-      </select>
-    </div>
-  )
-}
 
 export default Input;
