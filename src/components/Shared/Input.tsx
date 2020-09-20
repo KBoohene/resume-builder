@@ -2,13 +2,16 @@ import React, { useContext } from 'react';
 import { ResumeContext } from '../../contexts/ResumeContext';
 import { InputInterface, InputType } from './Types';
 
-const Input = ({ type, label }: InputInterface) => {
+const Input = ({ type, label, path }: InputInterface) => {
   const { dispatch } = useContext(ResumeContext);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: 'on_input',
-      payload: e.currentTarget.value,
+      payload: {
+        value: e.currentTarget.value,
+        path
+      }
     });
   };
 

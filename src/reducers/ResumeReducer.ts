@@ -1,3 +1,6 @@
+const set = require('lodash/set');
+const cloneDeep = require('lodash/cloneDeep');
+
 export interface BuilderAppState {
   profile: {
     firstName: string,
@@ -6,15 +9,23 @@ export interface BuilderAppState {
   }
 }
 
+interface PayloadValue {
+  value: string,
+  path: string
+}
+
 interface Action {
   type: string
-  payload: string
+  payload: PayloadValue
 }
 
 export const ResumeReducer = (state: BuilderAppState, action: Action): BuilderAppState => {
   switch (action.type) {
     case 'on_input':
-      return { profile: { firstName: action.payload, lastName: action.payload, email: action.payload } }
+      const newState: BuilderAppState = cloneDeep(state);
+      set(newState, action.payload.path, action.payload.value);
+      return newState;
+    //return { profile: { firstName: action.payload, lastName: action.payload, email: action.payload } }
     default:
       return state;
   }

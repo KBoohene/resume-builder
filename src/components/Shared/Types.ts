@@ -2,7 +2,8 @@ export type InputInterface = {
   value: string,
   placeholder: string,
   type: InputType,
-  label: string
+  label: string,
+  path?: string
 }
 
 export enum InputType {
