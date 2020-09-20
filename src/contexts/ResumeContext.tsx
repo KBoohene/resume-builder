@@ -1,24 +1,17 @@
 import React, { createContext, useReducer } from 'react';
+import { InitialState } from '../data/initialState';
 import { BuilderAppState, ResumeReducer } from '../reducers/ResumeReducer';
-
-const currentState: BuilderAppState = {
-  profile: {
-    firstName: '',
-    lastName: '',
-    email: ''
-  }
-}
 
 type Props = {
   children: React.ReactNode
 };
 
-export const ResumeContext = createContext<BuilderAppState | any>(currentState);
+export const ResumeContext = createContext<BuilderAppState | any>(InitialState);
 
 const ResumeContextProvider = ({ children }: Props) => {
-  const [state, dispatch] = useReducer(ResumeReducer, currentState);
+  const [resume, dispatch] = useReducer(ResumeReducer, InitialState);
   return (
-    <ResumeContext.Provider value={{ state, dispatch }}>
+    <ResumeContext.Provider value={{ resume, dispatch }}>
       {children}
     </ResumeContext.Provider>
   );

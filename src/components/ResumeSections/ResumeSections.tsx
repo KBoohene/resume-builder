@@ -7,7 +7,7 @@ import ProjectsForm from './Projects/ProjectsForm';
 import SkillsForm from './Skills/SkillsForm';
 import RelevantCoursesForm from './RelevantCourses/RelevantCoursesForm';
 
-const ResumeSections = ({ section = SectionType.skills }: SectionInterface) => {
+const ResumeSections = ({ section = SectionType.profile }: SectionInterface) => {
   return (
     <div>
       {(section === SectionType.profile) && (
