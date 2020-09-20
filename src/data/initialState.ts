@@ -4,6 +4,14 @@ export const InitialState: BuilderAppState = {
   profile: {
     firstName: '',
     lastName: '',
-    email: ''
+    email: '',
+    address: {
+      state: '',
+      zip: '',
+      city: '',
+      country: '',
+      street: '',
+      apt: ''
+    }
   }
 };

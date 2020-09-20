@@ -5,7 +5,15 @@ export interface BuilderAppState {
   profile: {
     firstName: string,
     lastName: string,
-    email: string
+    email: string,
+    address: {
+      state: string,
+      zip: string,
+      city: string,
+      country: string,
+      street: string,
+      apt: string
+    }
   }
 }
 
