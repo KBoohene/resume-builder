@@ -7,7 +7,8 @@ export type InputInterface = {
 }
 
 export type ActionTypeInteface = {
-  path?: string
+  path?: string,
+  type?: InputType
 }
 
 export enum InputType {
