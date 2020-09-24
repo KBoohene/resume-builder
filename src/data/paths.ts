@@ -25,3 +25,12 @@ export const EducationPaths = {
 export const SkillPaths = {
   Skills: 'skills'
 }
+
+export const WorkPaths = {
+  Description: 'work.description',
+  DurationFrom: 'work.duration.from',
+  DurationTo: 'work.duration.to',
+  Role: 'work.role',
+  Country: 'work.address.country',
+  City: 'work.address.city'
+}
