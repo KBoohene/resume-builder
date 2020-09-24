@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ResumeContext } from '../../contexts/ResumeContext';
-import ActionInput from './ActionInput';
 import { InputInterface, InputType } from './Types';
 
 const Input = ({ type, label, path }: InputInterface) => {
@@ -36,11 +35,6 @@ const Input = ({ type, label, path }: InputInterface) => {
         <select>
           <option value=""></option>
         </select>
-      )}
-      {(type === InputType.action) && (
-        <div>
-          <ActionInput path={path} />
-        </div>
       )}
     </div>);
 }
