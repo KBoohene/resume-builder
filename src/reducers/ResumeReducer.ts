@@ -14,7 +14,14 @@ export interface BuilderAppState {
       street: string,
       apt: string
     }
+  },
+  education: {
+    schoolName: string,
+    city: string,
+    country: string,
+    duration: string
   }
+
 }
 
 interface PayloadValue {
@@ -33,7 +40,6 @@ export const ResumeReducer = (state: BuilderAppState, action: Action): BuilderAp
       const newState: BuilderAppState = cloneDeep(state);
       set(newState, action.payload.path, action.payload.value);
       return newState;
-    //return { profile: { firstName: action.payload, lastName: action.payload, email: action.payload } }
     default:
       return state;
   }

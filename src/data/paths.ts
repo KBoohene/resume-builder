@@ -13,3 +13,10 @@ export const AddressPaths = {
   Country: 'profile.address.country',
   Zip: 'profile.address.zip'
 }
+
+export const EducationPaths = {
+  Name: 'education.schoolName',
+  Duration: 'education.duration',
+  City: 'education.city',
+  Country: 'education.country'
+}

@@ -13,5 +13,11 @@ export const InitialState: BuilderAppState = {
       street: '',
       apt: ''
     }
+  },
+  education: {
+    city: '',
+    country: '',
+    duration: '',
+    schoolName: ''
   }
 };
