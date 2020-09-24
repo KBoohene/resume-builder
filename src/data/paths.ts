@@ -16,7 +16,8 @@ export const AddressPaths = {
 
 export const EducationPaths = {
   Name: 'education.schoolName',
-  Duration: 'education.duration',
+  DurationFrom: 'education.duration.from',
+  DurationTo: 'education.duration.to',
   City: 'education.city',
   Country: 'education.country'
 }

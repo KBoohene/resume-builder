@@ -25,7 +25,7 @@ const Input = ({ type, label, path }: InputInterface) => {
       )}
       {(type === InputType.date) && (
         <div>
-          <input type="date" />
+          <input type="date" onChange={handleChange} />
         </div>
       )}
       {(type === InputType.textarea) && (

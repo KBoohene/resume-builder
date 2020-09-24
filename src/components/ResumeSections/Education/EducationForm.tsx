@@ -9,7 +9,10 @@ const EducationForm = () => {
       <div>
         <h1>Education</h1>
         <Input type={InputType.text} label={'Name'} value={''} placeholder={''} path={EducationPaths.Name} />
-        <Input type={InputType.text} label={'Duration'} value={''} placeholder={''} path={EducationPaths.Duration} />
+
+        <h2>Duration</h2>
+        <Input type={InputType.date} label={'From'} value={''} placeholder={''} path={EducationPaths.DurationFrom} />
+        <Input type={InputType.date} label={'To'} value={''} placeholder={''} path={EducationPaths.DurationTo} />
       </div>
       <div>
         <h2>Location</h2>

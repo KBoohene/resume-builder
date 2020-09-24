@@ -11,7 +11,12 @@ const Education = () => {
       {resume.education.schoolName}
 
       <h2>Duration</h2>
-      {resume.education.duration}
+
+      <h3>From</h3>
+      {resume.education.duration.from}
+
+      <h3>To</h3>
+      {resume.education.duration.to}
 
       <h1>Location</h1>
 

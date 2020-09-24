@@ -17,7 +17,7 @@ export const InitialState: BuilderAppState = {
   education: {
     city: '',
     country: '',
-    duration: '',
+    duration: { from: '', to: '' },
     schoolName: ''
   }
 };

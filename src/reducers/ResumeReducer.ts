@@ -19,7 +19,7 @@ export interface BuilderAppState {
     schoolName: string,
     city: string,
     country: string,
-    duration: string
+    duration: { from: string, to: string }
   }
 
 }
