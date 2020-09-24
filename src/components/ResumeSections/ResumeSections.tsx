@@ -6,6 +6,7 @@ import ProfileForm from './Profile/ProfileForm';
 import ProjectsForm from './Projects/ProjectsForm';
 import SkillsForm from './Skills/SkillsForm';
 import RelevantCoursesForm from './RelevantCourses/RelevantCoursesForm';
+import WorkForm from './WorkExperience/WorkForm';
 
 const ResumeSections = ({ section = SectionType.skills }: SectionInterface) => {
   return (
@@ -27,6 +28,9 @@ const ResumeSections = ({ section = SectionType.skills }: SectionInterface) => {
       )}
       {(section === SectionType.relevantCourses) && (
         <RelevantCoursesForm />
+      )}
+      {(section === SectionType.work) && (
+        <WorkForm />
       )}
     </div>);
 }

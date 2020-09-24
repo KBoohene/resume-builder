@@ -8,5 +8,6 @@ export enum SectionType {
   projects,
   relevantCourses,
   achievements,
-  skills
+  skills,
+  work
 }

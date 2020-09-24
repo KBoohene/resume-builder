@@ -16,6 +16,9 @@ const ResumeBoard = ({ section = SectionType.skills }: SectionInterface) => {
       {(section === SectionType.skills) && (
         <Skills />
       )}
+      {(section === SectionType.work) && (
+        <div></div>
+      )}
     </div>);
 }
 
