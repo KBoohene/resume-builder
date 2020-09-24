@@ -10,5 +10,6 @@ export enum InputType {
   textarea,
   text,
   dropdown,
-  date
+  date,
+  action
 }

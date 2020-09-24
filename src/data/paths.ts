@@ -21,3 +21,7 @@ export const EducationPaths = {
   City: 'education.city',
   Country: 'education.country'
 }
+
+export const SkillPaths = {
+  Skills: 'skills'
+}
