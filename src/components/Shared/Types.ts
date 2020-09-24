@@ -6,6 +6,10 @@ export type InputInterface = {
   path?: string
 }
 
+export type ActionTypeInteface = {
+  path?: string
+}
+
 export enum InputType {
   textarea,
   text,

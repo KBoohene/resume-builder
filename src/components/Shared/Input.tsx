@@ -1,24 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { ResumeContext } from '../../contexts/ResumeContext';
+import ActionInput from './ActionInput';
 import { InputInterface, InputType } from './Types';
 
 const Input = ({ type, label, path }: InputInterface) => {
   const { dispatch } = useContext(ResumeContext);
-  const [itemValue, setItemValue] = useState('');
-
-  const onChangeItemValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setItemValue(e.currentTarget.value)
-  }
-
-  const onAddItem = (() => {
-    dispatch({
-      type: 'on_add_item',
-      payload: {
-        value: itemValue,
-        path
-      }
-    })
-  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
@@ -53,8 +39,7 @@ const Input = ({ type, label, path }: InputInterface) => {
       )}
       {(type === InputType.action) && (
         <div>
-          <input type="text" onChange={onChangeItemValue} />
-          <button onClick={onAddItem}>Add</button>
+          <ActionInput path={path} />
         </div>
       )}
     </div>);
