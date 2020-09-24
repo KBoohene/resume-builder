@@ -1,12 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { ResumeContext } from '../../contexts/ResumeContext';
-import { ActionTypeInteface } from './Types';
+import { ActionTypeInteface, InputType } from './Types';
 
-const ActionInput = ({ path }: ActionTypeInteface) => {
+// TODO: Convert to use context instead of state
+const ActionInput = ({ path, type }: ActionTypeInteface) => {
   const { dispatch } = useContext(ResumeContext);
   const [itemValue, setItemValue] = useState('');
 
-  const onChangeItemValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setItemValue(e.currentTarget.value)
+  }
+
+  const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setItemValue(e.currentTarget.value)
   }
 
@@ -22,7 +27,12 @@ const ActionInput = ({ path }: ActionTypeInteface) => {
 
   return (
     <div>
-      <input type="text" onChange={onChangeItemValue} />
+      {(type === InputType.textarea) && (
+        <textarea rows={4} cols={15} onChange={handleTextAreaChange} />
+      )}
+      {(type === InputType.text) && (
+        <input type="text" onChange={handleTextChange} />
+      )}
       <button onClick={onAddItem}>Add</button>
     </div>
   );
