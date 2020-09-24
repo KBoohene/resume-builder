@@ -20,8 +20,8 @@ export interface BuilderAppState {
     city: string,
     country: string,
     duration: { from: string, to: string }
-  }
-
+  },
+  skills: []
 }
 
 interface PayloadValue {

@@ -19,5 +19,6 @@ export const InitialState: BuilderAppState = {
     country: '',
     duration: { from: '', to: '' },
     schoolName: ''
-  }
+  },
+  skills: []
 };
