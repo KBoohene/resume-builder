@@ -34,3 +34,14 @@ export const WorkPaths = {
   Country: 'work.address.country',
   City: 'work.address.city'
 }
+
+export const RelevantCoursesPaths = {
+  Courses: 'courses'
+}
+
+export const ProjectPaths = {
+  Title: 'project.title',
+  DurationFrom: 'project.duration.from',
+  DurationTo: 'project.duration.to',
+  Description: 'project.description'
+}
