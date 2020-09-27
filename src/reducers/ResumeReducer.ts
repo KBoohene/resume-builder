@@ -1,29 +1,7 @@
 const set = require('lodash/set');
 const get = require('lodash/get');
 const cloneDeep = require('lodash/cloneDeep');
-
-export interface BuilderAppState {
-  profile: {
-    firstName: string,
-    lastName: string,
-    email: string,
-    address: {
-      state: string,
-      zip: string,
-      city: string,
-      country: string,
-      street: string,
-      apt: string
-    }
-  },
-  education: {
-    schoolName: string,
-    city: string,
-    country: string,
-    duration: { from: string, to: string }
-  },
-  skills: []
-}
+import { BuilderAppInterface } from '../data/Interfaces'
 
 interface PayloadValue {
   value: string,
@@ -35,8 +13,8 @@ interface Action {
   payload: PayloadValue
 }
 
-export const ResumeReducer = (state: BuilderAppState, action: Action): BuilderAppState => {
-  let newState: BuilderAppState | any;
+export const ResumeReducer = (state: BuilderAppInterface, action: Action): BuilderAppInterface => {
+  let newState: BuilderAppInterface | any;
 
   switch (action.type) {
     case 'on_input':

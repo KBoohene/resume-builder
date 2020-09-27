@@ -1,6 +1,6 @@
-import { BuilderAppState } from "../reducers/ResumeReducer";
+import { ActionInputInterface, BuilderAppInterface } from "./Interfaces";
 
-export const InitialState: BuilderAppState = {
+export const InitialBuilderState: BuilderAppInterface = {
   profile: {
     firstName: '',
     lastName: '',
@@ -22,3 +22,7 @@ export const InitialState: BuilderAppState = {
   },
   skills: []
 };
+
+export const InitialInputState: ActionInputInterface = {
+
+}
