@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { ResumeContext } from '../../contexts/ResumeContext';
-import { ActionTypeInteface, InputType } from './Types';
+import { ResumeContext } from '../../../contexts/ResumeContext';
+import { ActionTypeInteface, InputType } from '../Types';
 
 // TODO: Convert to use context instead of state
 const ActionInput = ({ path, type }: ActionTypeInteface) => {

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { ResumeContext } from '../../contexts/ResumeContext';
-import { InputInterface, InputType } from './Types';
+import { ResumeContext } from '../../../contexts/ResumeContext';
+import { InputInterface, InputType } from '../Types';
 
 const Input = ({ type, label, path }: InputInterface) => {
   const { dispatch } = useContext(ResumeContext);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { WorkPaths } from '../../../data/paths';
-import ActionInput from '../../Shared/ActionInput';
+import ActionInput from '../../Shared/Components/ActionInput';
 import { InputType } from '../../Shared/Types';
 
 // TODO: Rethink how to properly structure array and state components

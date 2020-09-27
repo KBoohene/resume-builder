@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../Shared/Input';
+import Input from '../../Shared/Components/Input';
 import { InputType } from '../../Shared/Types'
 import { EducationPaths } from '../../../data/paths';
 
