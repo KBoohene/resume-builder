@@ -2,6 +2,7 @@ import { BuilderAppInterface } from "./Interfaces";
 
 export const InitialBuilderState: BuilderAppInterface = {
   profile: {
+    id: '',
     firstName: '',
     lastName: '',
     email: '',
@@ -15,6 +16,7 @@ export const InitialBuilderState: BuilderAppInterface = {
     }
   },
   education: {
+    id: '',
     city: '',
     country: '',
     duration: { from: '', to: '' },
@@ -22,5 +24,7 @@ export const InitialBuilderState: BuilderAppInterface = {
   },
   skills: [],
   courses: [],
-  work: []
+  work: [],
+  projects: [],
+  temp: {}
 };
