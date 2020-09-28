@@ -1,22 +1,3 @@
-export interface ActionInputInterface {
-  work?: {
-    role: string,
-    companyName: string,
-    durationFrom: string,
-    durationTo: string,
-    description: string,
-    location: string
-  },
-  relevantCourse?: string,
-  skill?: string,
-  project?: {
-    title: string,
-    durationFrom: string,
-    durationTo: string,
-    description: string
-  }
-};
-
 export interface BuilderAppInterface {
   profile: {
     firstName: string,
@@ -37,5 +18,7 @@ export interface BuilderAppInterface {
     country: string,
     duration: { from: string, to: string }
   },
-  skills: []
+  skills: [],
+  work: [],
+  courses: []
 };

@@ -1,4 +1,4 @@
-import { ActionInputInterface, BuilderAppInterface } from "./Interfaces";
+import { BuilderAppInterface } from "./Interfaces";
 
 export const InitialBuilderState: BuilderAppInterface = {
   profile: {
@@ -20,9 +20,7 @@ export const InitialBuilderState: BuilderAppInterface = {
     duration: { from: '', to: '' },
     schoolName: ''
   },
-  skills: []
+  skills: [],
+  courses: [],
+  work: []
 };
-
-export const InitialInputState: ActionInputInterface = {
-
-}
