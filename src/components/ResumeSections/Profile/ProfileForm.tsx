@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from '../../Shared/Components/Input';
 import { InputType } from '../../Shared/Types'
-import { ProfilePaths, AddressPaths } from '../../../data/paths';
+import { ProfilePaths, AddressPaths } from '../../../data/AppPaths';
 
 const ProfileForm = () => {
   return (

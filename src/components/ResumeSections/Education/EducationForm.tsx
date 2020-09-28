@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from '../../Shared/Components/Input';
 import { InputType } from '../../Shared/Types'
-import { EducationPaths } from '../../../data/paths';
+import { EducationPaths } from '../../../data/AppPaths';
 
 const EducationForm = () => {
   return (
