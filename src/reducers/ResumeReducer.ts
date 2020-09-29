@@ -21,15 +21,11 @@ export const ResumeReducer = (state: BuilderAppInterface, action: Action): Build
       newState = cloneDeep(state);
       set(newState, action.payload.path, action.payload.value);
       return newState;
-    case 'on_input_temp':
-      newState = cloneDeep(state);
-      set(newState, 'temp.' + action.payload.path, action.payload.value);
-      return newState;
     case 'on_add_item':
-      const items = get(state, action.payload.path, []);
       newState = cloneDeep(state);
-      const tempValues = state.temp;
-      set(newState, action.payload.path, [...items, tempValues]);
+      const items = get(state, action.payload.path, []);
+      set(newState, action.payload.path, [...items, action.payload.value]);
+      console.log(newState);
       return newState;
     default:
       return state;

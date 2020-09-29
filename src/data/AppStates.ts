@@ -1,4 +1,4 @@
-import { BuilderAppInterface } from "./Interfaces";
+import { BuilderAppInterface, MultipleInputInterface } from "./Interfaces";
 
 export const InitialBuilderState: BuilderAppInterface = {
   profile: {
@@ -25,6 +25,12 @@ export const InitialBuilderState: BuilderAppInterface = {
   skills: [],
   courses: [],
   work: [],
-  projects: [],
-  temp: {}
+  projects: []
 };
+
+export const InitMultipleInputState: MultipleInputInterface = {
+  work: {},
+  skill: '',
+  course: {},
+  project: {}
+}
