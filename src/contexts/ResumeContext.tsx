@@ -10,9 +10,9 @@ type Props = {
 export const ResumeContext = createContext<BuilderAppInterface | any>(InitialBuilderState);
 
 const ResumeContextProvider = ({ children }: Props) => {
-  const [resume, dispatch] = useReducer(ResumeReducer, InitialBuilderState);
+  const [resume, submitChange] = useReducer(ResumeReducer, InitialBuilderState);
   return (
-    <ResumeContext.Provider value={{ resume, dispatch }}>
+    <ResumeContext.Provider value={{ resume, submitChange }}>
       {children}
     </ResumeContext.Provider>
   );
