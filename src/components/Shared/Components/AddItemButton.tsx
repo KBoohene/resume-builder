@@ -3,7 +3,7 @@ import { MultipleInputContext } from '../../../contexts/MultipleInputContext';
 import { ResumeContext } from '../../../contexts/ResumeContext';
 import { AddItemButtonInterface } from '../Types';
 
-const MultipleInput = ({
+const AddItemButton = ({
   childPath,
   parentPath,
   label,
@@ -29,4 +29,4 @@ const MultipleInput = ({
   );
 };
 
-export default MultipleInput;
+export default AddItemButton;
