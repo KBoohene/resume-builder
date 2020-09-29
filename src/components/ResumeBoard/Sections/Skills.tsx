@@ -1,17 +1,19 @@
 import React, { useContext } from 'react';
+import { MultipleInputContext } from '../../../contexts/MultipleInputContext';
 import { ResumeContext } from '../../../contexts/ResumeContext';
-import { SkillType } from '../../../data/Interfaces';
 
 const Skills = () => {
   const { resume } = useContext(ResumeContext);
+  const { tempInput } = useContext(MultipleInputContext);
+
   return (
     <div>
       <h2>Skills</h2>
       <div>
-        {resume.temp !== {} ? resume.temp.skill : ''}
-        {resume.skills.map((skills: SkillType, index: number) => (
-          <p key={index}>{skills.skill}</p>
+        {resume.skills.map((skill: string, index: number) => (
+          <p key={index}>{skill}</p>
         ))}
+        {tempInput.skill}
       </div>
 
     </div>
