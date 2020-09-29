@@ -25,9 +25,8 @@ const Education = () => {
 
       <h2>Country</h2>
       {resume.education.country}
-
     </div>
   );
-}
+};
 
 export default Education;

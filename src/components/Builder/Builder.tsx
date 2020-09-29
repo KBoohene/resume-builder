@@ -8,7 +8,7 @@ import SectionsNavbar from '../SectionsNavbar/SectionsNavbar';
 const Builder = () => {
   return (
     <div>
-      <div className="resume-builder">
+      <div className='resume-builder'>
         <ResumeContextProvider>
           <MultipleInputContextProvider>
             <SectionsNavbar />
@@ -17,7 +17,8 @@ const Builder = () => {
           </MultipleInputContextProvider>
         </ResumeContextProvider>
       </div>
-    </div>);
-}
+    </div>
+  );
+};
 
 export default Builder;

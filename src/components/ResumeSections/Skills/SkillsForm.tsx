@@ -9,9 +9,13 @@ const SkillsForm = () => {
     <div>
       <h2>Skills</h2>
       <MultipleInput type={InputType.text} path={SkillPath} />
-      <AddItemButton label={'Add Item'} childPath={SkillPath} parentPath={SkillsPath} />
+      <AddItemButton
+        label={'Add Item'}
+        childPath={SkillPath}
+        parentPath={SkillsPath}
+      />
     </div>
   );
-}
+};
 
 export default SkillsForm;

@@ -11,28 +11,15 @@ import WorkForm from './WorkExperience/WorkForm';
 const ResumeSections = ({ section = SectionType.skills }: SectionInterface) => {
   return (
     <div>
-      {(section === SectionType.profile) && (
-        <ProfileForm />
-      )}
-      {(section === SectionType.education) && (
-        <EducationForm />
-      )}
-      {(section === SectionType.projects) && (
-        <ProjectsForm />
-      )}
-      {(section === SectionType.achievements) && (
-        <AchievementsForm />
-      )}
-      {(section === SectionType.skills) && (
-        <SkillsForm />
-      )}
-      {(section === SectionType.relevantCourses) && (
-        <RelevantCoursesForm />
-      )}
-      {(section === SectionType.work) && (
-        <WorkForm />
-      )}
-    </div>);
-}
+      {section === SectionType.profile && <ProfileForm />}
+      {section === SectionType.education && <EducationForm />}
+      {section === SectionType.projects && <ProjectsForm />}
+      {section === SectionType.achievements && <AchievementsForm />}
+      {section === SectionType.skills && <SkillsForm />}
+      {section === SectionType.relevantCourses && <RelevantCoursesForm />}
+      {section === SectionType.work && <WorkForm />}
+    </div>
+  );
+};
 
 export default ResumeSections;

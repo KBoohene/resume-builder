@@ -4,10 +4,12 @@ import { BuilderAppInterface } from '../data/Interfaces';
 import { ResumeReducer } from '../reducers/ResumeReducer';
 
 type Props = {
-  children: React.ReactNode
+  children: React.ReactNode;
 };
 
-export const ResumeContext = createContext<BuilderAppInterface | any>(InitialBuilderState);
+export const ResumeContext = createContext<BuilderAppInterface | any>(
+  InitialBuilderState
+);
 
 const ResumeContextProvider = ({ children }: Props) => {
   const [resume, submitChange] = useReducer(ResumeReducer, InitialBuilderState);
@@ -16,6 +18,6 @@ const ResumeContextProvider = ({ children }: Props) => {
       {children}
     </ResumeContext.Provider>
   );
-}
+};
 
 export default ResumeContextProvider;

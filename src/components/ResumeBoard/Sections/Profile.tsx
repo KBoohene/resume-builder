@@ -38,6 +38,6 @@ const Profile = () => {
       {resume.profile.address.state}
     </div>
   );
-}
+};
 
 export default Profile;

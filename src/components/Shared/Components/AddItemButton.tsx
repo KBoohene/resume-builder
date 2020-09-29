@@ -3,7 +3,11 @@ import { MultipleInputContext } from '../../../contexts/MultipleInputContext';
 import { ResumeContext } from '../../../contexts/ResumeContext';
 import { AddItemButtonInterface } from '../Types';
 
-const MultipleInput = ({ childPath, parentPath, label }: AddItemButtonInterface) => {
+const MultipleInput = ({
+  childPath,
+  parentPath,
+  label,
+}: AddItemButtonInterface) => {
   const { tempInput, dispatch } = useContext(MultipleInputContext);
   const { submitChange } = useContext(ResumeContext);
 
@@ -12,8 +16,8 @@ const MultipleInput = ({ childPath, parentPath, label }: AddItemButtonInterface)
       type: 'on_add_item',
       payload: {
         value: tempInput[childPath],
-        path: parentPath
-      }
+        path: parentPath,
+      },
     });
     dispatch({ type: 'clear' });
   };
@@ -21,8 +25,8 @@ const MultipleInput = ({ childPath, parentPath, label }: AddItemButtonInterface)
   return (
     <div>
       <button onClick={onSubmit}>{label}</button>
-    </div >);
-}
-
+    </div>
+  );
+};
 
 export default MultipleInput;

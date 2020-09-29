@@ -4,16 +4,19 @@ const get = require('lodash/get');
 const cloneDeep = require('lodash/cloneDeep');
 
 interface PayloadValue {
-  value?: string,
-  path: string
+  value?: string;
+  path: string;
 }
 
 interface Action {
-  type: string
-  payload: PayloadValue
+  type: string;
+  payload: PayloadValue;
 }
 
-export const ResumeReducer = (state: BuilderAppInterface, action: Action): BuilderAppInterface => {
+export const ResumeReducer = (
+  state: BuilderAppInterface,
+  action: Action
+): BuilderAppInterface => {
   let newState: BuilderAppInterface | any;
 
   switch (action.type) {
@@ -30,4 +33,4 @@ export const ResumeReducer = (state: BuilderAppInterface, action: Action): Build
     default:
       return state;
   }
-}
+};

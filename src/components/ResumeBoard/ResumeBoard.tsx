@@ -7,19 +7,12 @@ import { SectionInterface, SectionType } from '../ResumeSections/Types';
 const ResumeBoard = ({ section = SectionType.skills }: SectionInterface) => {
   return (
     <div>
-      {(section === SectionType.profile) && (
-        <Profile />
-      )}
-      {(section === SectionType.education) && (
-        <Education />
-      )}
-      {(section === SectionType.skills) && (
-        <Skills />
-      )}
-      {(section === SectionType.work) && (
-        <div></div>
-      )}
-    </div>);
-}
+      {section === SectionType.profile && <Profile />}
+      {section === SectionType.education && <Education />}
+      {section === SectionType.skills && <Skills />}
+      {section === SectionType.work && <div></div>}
+    </div>
+  );
+};
 
 export default ResumeBoard;

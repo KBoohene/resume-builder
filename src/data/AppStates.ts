@@ -1,4 +1,4 @@
-import { BuilderAppInterface, MultipleInputInterface } from "./Interfaces";
+import { BuilderAppInterface, MultipleInputInterface } from './Interfaces';
 
 export const InitialBuilderState: BuilderAppInterface = {
   profile: {
@@ -12,25 +12,25 @@ export const InitialBuilderState: BuilderAppInterface = {
       city: '',
       country: '',
       street: '',
-      apt: ''
-    }
+      apt: '',
+    },
   },
   education: {
     id: '',
     city: '',
     country: '',
     duration: { from: '', to: '' },
-    schoolName: ''
+    schoolName: '',
   },
   skills: [],
   courses: [],
   work: [],
-  projects: []
+  projects: [],
 };
 
 export const InitMultipleInputState: MultipleInputInterface = {
   work: {},
   skill: '',
   course: {},
-  project: {}
-}
+  project: {},
+};

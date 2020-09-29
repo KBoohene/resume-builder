@@ -1,6 +1,6 @@
 export type SectionInterface = {
-  section?: SectionType
-}
+  section?: SectionType;
+};
 
 export enum SectionType {
   profile,
@@ -9,5 +9,5 @@ export enum SectionType {
   relevantCourses,
   achievements,
   skills,
-  work
+  work,
 }

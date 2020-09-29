@@ -10,34 +10,32 @@ const Input = ({ type, label, path }: InputInterface) => {
       type: 'on_input',
       payload: {
         value: e.currentTarget.value,
-        path
-      }
+        path,
+      },
     });
   };
 
   return (
     <div>
-      <label htmlFor="">{label}</label>
-      {(type === InputType.text) && (
+      <label htmlFor=''>{label}</label>
+      {type === InputType.text && (
         <div>
-          <input type="text" onChange={handleChange} />
+          <input type='text' onChange={handleChange} />
         </div>
       )}
-      {(type === InputType.date) && (
+      {type === InputType.date && (
         <div>
-          <input type="date" onChange={handleChange} />
+          <input type='date' onChange={handleChange} />
         </div>
       )}
-      {(type === InputType.textarea) && (
-        <textarea name="" id="" />
-      )}
-      {(type === InputType.dropdown) && (
+      {type === InputType.textarea && <textarea name='' id='' />}
+      {type === InputType.dropdown && (
         <select>
-          <option value=""></option>
+          <option value=''></option>
         </select>
       )}
-    </div>);
-}
-
+    </div>
+  );
+};
 
 export default Input;

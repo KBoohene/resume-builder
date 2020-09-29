@@ -4,16 +4,19 @@ const set = require('lodash/set');
 const cloneDeep = require('lodash/cloneDeep');
 
 interface PayloadValue {
-  value?: string,
-  path: string
+  value?: string;
+  path: string;
 }
 
 interface Action {
-  type: string
-  payload?: PayloadValue
+  type: string;
+  payload?: PayloadValue;
 }
 
-export const MultipleInputReducer = (state: MultipleInputInterface, action: Action): MultipleInputInterface => {
+export const MultipleInputReducer = (
+  state: MultipleInputInterface,
+  action: Action
+): MultipleInputInterface => {
   let newState: MultipleInputInterface | any;
 
   switch (action.type) {
@@ -29,4 +32,4 @@ export const MultipleInputReducer = (state: MultipleInputInterface, action: Acti
     default:
       return state;
   }
-}
+};

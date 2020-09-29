@@ -15,9 +15,8 @@ const Skills = () => {
         ))}
         {tempInput.skill}
       </div>
-
     </div>
   );
-}
+};
 
 export default Skills;

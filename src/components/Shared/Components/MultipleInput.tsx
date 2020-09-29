@@ -10,33 +10,33 @@ const MultipleInput = ({ type, path }: MultipleInputInterface) => {
       type: 'on_input',
       payload: {
         value: e.currentTarget.value,
-        path
-      }
+        path,
+      },
     });
   };
 
   return (
     <div>
-      {(type === InputType.text) && (
+      {type === InputType.text && (
         <div>
-          <input type="text" value={tempInput[path]} onChange={handleChange} />
+          <input type='text' value={tempInput[path]} onChange={handleChange} />
         </div>
       )}
-      {(type === InputType.date) && (
+      {type === InputType.date && (
         <div>
-          <input type="date" value={tempInput[path]} onChange={handleChange} />
+          <input type='date' value={tempInput[path]} onChange={handleChange} />
         </div>
       )}
-      {(type === InputType.textarea) && (
-        <textarea name="" value={tempInput[path]} id="" />
+      {type === InputType.textarea && (
+        <textarea name='' value={tempInput[path]} id='' />
       )}
-      {(type === InputType.dropdown) && (
+      {type === InputType.dropdown && (
         <select>
-          <option value=""></option>
+          <option value=''></option>
         </select>
       )}
-    </div >);
-}
-
+    </div>
+  );
+};
 
 export default MultipleInput;
