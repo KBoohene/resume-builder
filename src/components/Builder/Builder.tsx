@@ -1,4 +1,5 @@
 import React from 'react';
+import MultipleInputContextProvider from '../../contexts/MultipleInputContext';
 import ResumeContextProvider from '../../contexts/ResumeContext';
 import ResumeBoard from '../ResumeBoard/ResumeBoard';
 import ResumeSections from '../ResumeSections/ResumeSections';
@@ -9,9 +10,11 @@ const Builder = () => {
     <div>
       <div className="resume-builder">
         <ResumeContextProvider>
-          <SectionsNavbar />
-          <ResumeSections />
-          <ResumeBoard />
+          <MultipleInputContextProvider>
+            <SectionsNavbar />
+            <ResumeSections />
+            <ResumeBoard />
+          </MultipleInputContextProvider>
         </ResumeContextProvider>
       </div>
     </div>);

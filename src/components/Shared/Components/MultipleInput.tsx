@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { ResumeContext } from '../../../contexts/ResumeContext';
-import { InputInterface, InputType } from '../Types';
+import { MultipleInputContext } from '../../../contexts/MultipleInputContext';
+import { InputType, MultipleInputInterface } from '../Types';
 
-const MultipleInput = ({ type, label, path }: InputInterface) => {
-  const { dispatch } = useContext(ResumeContext);
+const MultipleInput = ({ type, path }: MultipleInputInterface) => {
+  const { tempInput, dispatch } = useContext(MultipleInputContext);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
-      type: 'on_input_temp',
+      type: 'on_input',
       payload: {
         value: e.currentTarget.value,
         path
@@ -17,26 +17,25 @@ const MultipleInput = ({ type, label, path }: InputInterface) => {
 
   return (
     <div>
-      <label htmlFor="">{label}</label>
       {(type === InputType.text) && (
         <div>
-          <input type="text" onChange={handleChange} />
+          <input type="text" value={tempInput[path]} onChange={handleChange} />
         </div>
       )}
       {(type === InputType.date) && (
         <div>
-          <input type="date" onChange={handleChange} />
+          <input type="date" value={tempInput[path]} onChange={handleChange} />
         </div>
       )}
       {(type === InputType.textarea) && (
-        <textarea name="" id="" />
+        <textarea name="" value={tempInput[path]} id="" />
       )}
       {(type === InputType.dropdown) && (
         <select>
           <option value=""></option>
         </select>
       )}
-    </div>);
+    </div >);
 }
 
 
