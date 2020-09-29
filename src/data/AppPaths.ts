@@ -22,9 +22,9 @@ export const EducationPaths = {
   Country: 'education.country'
 }
 
-export const SkillPaths = {
-  Skills: 'skills'
-}
+export const SkillsPath = 'skills'
+
+export const SkillPath = 'skill'
 
 export const WorkPaths = {
   Description: 'work.description',
