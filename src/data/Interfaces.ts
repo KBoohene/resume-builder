@@ -28,22 +28,18 @@ type EducationType = {
   duration: { from: string, to: string }
 }
 
-export type SkillType = {
-  skill: string
-}
 export interface MultipleInputInterface {
   work: {},
-  skills: string,
-  courses: {},
-  project: ProjectType
+  skill: string,
+  course: {},
+  project: {} | ProjectType
 }
 
 export interface BuilderAppInterface {
   profile: ProfileType,
   education: EducationType,
-  skills: SkillType[],
+  skills: string[],
   work: [],
   courses: [],
-  projects: [],
-  temp: {}
+  projects: []
 };
