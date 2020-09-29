@@ -2,12 +2,19 @@ export type InputInterface = {
   value: string,
   placeholder: string,
   type: InputType,
-  label: string,
+  label?: string,
   path?: string
 }
 
-export type ButtonInterface = {
+export type MultipleInputInterface = {
+  type: InputType,
   path: string
+}
+
+export type AddItemButtonInterface = {
+  childPath: string,
+  parentPath: string,
+  label: string
 }
 
 export enum InputType {
