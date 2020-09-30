@@ -1,4 +1,4 @@
-import { BuilderAppInterface } from '../data/Interfaces';
+import { ResumeInterface } from '../data/Interfaces';
 const set = require('lodash/set');
 const get = require('lodash/get');
 const cloneDeep = require('lodash/cloneDeep');
@@ -14,10 +14,10 @@ interface Action {
 }
 
 export const ResumeReducer = (
-  state: BuilderAppInterface,
+  state: ResumeInterface,
   action: Action
-): BuilderAppInterface => {
-  let newState: BuilderAppInterface | any;
+): ResumeInterface => {
+  let newState: ResumeInterface | any;
 
   switch (action.type) {
     case 'on_input':

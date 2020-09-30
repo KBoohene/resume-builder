@@ -1,13 +1,13 @@
 import React, { createContext, useReducer } from 'react';
 import { InitialBuilderState } from '../data/AppStates';
-import { BuilderAppInterface } from '../data/Interfaces';
+import { ResumeInterface } from '../data/Interfaces';
 import { ResumeReducer } from '../reducers/ResumeReducer';
 
 type Props = {
   children: React.ReactNode;
 };
 
-export const ResumeContext = createContext<BuilderAppInterface | any>(
+export const ResumeContext = createContext<ResumeInterface | any>(
   InitialBuilderState
 );
 

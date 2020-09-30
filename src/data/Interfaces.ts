@@ -42,7 +42,7 @@ export interface MultipleInputInterface {
   project: {} | ProjectType;
 }
 
-export interface BuilderAppInterface {
+export interface ResumeInterface {
   profile: ProfileType;
   education: EducationType;
   skills: string[];
