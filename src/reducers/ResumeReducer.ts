@@ -28,7 +28,6 @@ export const ResumeReducer = (
       newState = cloneDeep(state);
       const items = get(state, action.payload.path, []);
       set(newState, action.payload.path, [...items, action.payload.value]);
-      console.log(newState);
       return newState;
     default:
       return state;
