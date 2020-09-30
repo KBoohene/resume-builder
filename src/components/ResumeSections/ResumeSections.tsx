@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionInterface, SectionType } from './Types';
+import { SectionInterface, SectionType } from '../../data/Types';
 import EducationForm from './Education/EducationForm';
 import AchievementsForm from './Achievements/AchievementsForm';
 import ProfileForm from './Profile/ProfileForm';
@@ -8,7 +8,9 @@ import SkillsForm from './Skills/SkillsForm';
 import RelevantCoursesForm from './RelevantCourses/RelevantCoursesForm';
 import WorkForm from './WorkExperience/WorkForm';
 
-const ResumeSections = ({ section = SectionType.skills }: SectionInterface) => {
+const ResumeSections = ({
+  section = SectionType.projects,
+}: SectionInterface) => {
   return (
     <div>
       {section === SectionType.profile && <ProfileForm />}

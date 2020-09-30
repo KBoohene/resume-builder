@@ -3,7 +3,7 @@ import Education from './Sections/Education';
 import Profile from './Sections/Profile';
 import Skills from './Sections/Skills';
 import Course from './Sections/Course';
-import { SectionInterface, SectionType } from '../ResumeSections/Types';
+import { SectionInterface, SectionType } from '../../data/Types';
 import Projects from './Sections/Projects';
 import Work from './Sections/Work';
 
