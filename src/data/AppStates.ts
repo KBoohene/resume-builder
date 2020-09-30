@@ -1,6 +1,6 @@
-import { BuilderAppInterface, MultipleInputInterface } from './Interfaces';
+import { ResumeInterface, MultipleInputInterface } from './Interfaces';
 
-export const InitialBuilderState: BuilderAppInterface = {
+export const InitialBuilderState: ResumeInterface = {
   profile: {
     id: '',
     firstName: '',
