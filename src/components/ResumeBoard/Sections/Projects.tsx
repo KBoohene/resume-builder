@@ -30,10 +30,10 @@ const Project = (project: ProjectType) => {
       {project.description}
 
       <h2>From</h2>
-      {project.durationFrom}
+      {project.duration ? project.duration.from : ''}
 
       <h2>To</h2>
-      {project.durationTo}
+      {project.duration ? project.duration.to : ''}
     </div>
   );
 };
