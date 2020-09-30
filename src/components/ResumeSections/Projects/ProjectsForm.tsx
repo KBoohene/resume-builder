@@ -2,7 +2,11 @@ import React from 'react';
 import MultipleInput from '../../Shared/Components/MultipleInput';
 import AddItemButton from '../../Shared/Components/AddItemButton';
 import { InputType } from '../../Shared/Types';
-import { MultipleInputPath, ProjectPaths } from '../../../data/AppPaths';
+import {
+  MultipleInputPath,
+  ProjectPaths,
+  ProjectsPath,
+} from '../../../data/AppPaths';
 
 const ProjectsForm = () => {
   return (
@@ -26,7 +30,7 @@ const ProjectsForm = () => {
       <AddItemButton
         label={'Add Item'}
         childPath={MultipleInputPath.Project}
-        parentPath={MultipleInputPath.Project}
+        parentPath={ProjectsPath}
       />
     </div>
   );

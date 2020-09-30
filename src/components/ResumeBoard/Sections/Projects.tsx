@@ -9,9 +9,9 @@ const Projects = () => {
 
   return (
     <div>
-      <h2>Skills</h2>
+      <h2>Projects</h2>
       <div>
-        {resume.Projects.map((project: ProjectType, index: number) => (
+        {resume.projects.map((project: ProjectType, index: number) => (
           <Project key={index} {...project} />
         ))}
         <Project {...tempInput.project} />
@@ -23,8 +23,6 @@ const Projects = () => {
 const Project = (project: ProjectType) => {
   return (
     <div>
-      <h1>Project</h1>
-
       <h2>Title</h2>
       {project.title}
 
