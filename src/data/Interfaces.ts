@@ -36,10 +36,10 @@ type EducationType = {
 };
 
 export interface MultipleInputInterface {
-  work: {};
+  work: WorkType;
   skill: string;
-  course: {};
-  project: {} | ProjectType;
+  course: string;
+  project: ProjectType;
 }
 
 export interface ResumeInterface {

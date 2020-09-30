@@ -29,8 +29,14 @@ export const InitialBuilderState: ResumeInterface = {
 };
 
 export const InitMultipleInputState: MultipleInputInterface = {
-  work: {},
+  work: {
+    description: '',
+    duration: { from: '', to: '' },
+    role: '',
+    address: { country: '', city: '' },
+    company: '',
+  },
   skill: '',
   course: '',
-  project: {},
+  project: { title: '', duration: { from: '', to: '' }, description: '' },
 };
