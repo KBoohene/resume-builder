@@ -31,6 +31,6 @@ export const InitialBuilderState: BuilderAppInterface = {
 export const InitMultipleInputState: MultipleInputInterface = {
   work: {},
   skill: '',
-  course: {},
+  course: '',
   project: {},
 };
