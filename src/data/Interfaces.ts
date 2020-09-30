@@ -1,8 +1,15 @@
-type ProjectType = {
+export type ProjectType = {
   title: string;
-  durationFrom: string;
-  durationTo: string;
+  duration: { from: string; to: string };
   description: string;
+};
+
+export type WorkType = {
+  description: string;
+  duration: { from: string; to: string };
+  role: string;
+  address: { country: string; city: string };
+  company: string;
 };
 
 type ProfileType = {
