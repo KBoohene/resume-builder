@@ -1,11 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, ChangeEvent } from 'react';
 import { MultipleInputContext } from '../../../contexts/MultipleInputContext';
 import { InputType, MultipleInputInterface } from '../Types';
 
 const MultipleInput = ({ type, path }: MultipleInputInterface) => {
   const { tempInput, dispatch } = useContext(MultipleInputContext);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+  ) => {
     dispatch({
       type: 'on_input',
       payload: {
@@ -28,7 +30,12 @@ const MultipleInput = ({ type, path }: MultipleInputInterface) => {
         </div>
       )}
       {type === InputType.textarea && (
-        <textarea name='' value={tempInput[path]} id='' />
+        <textarea
+          name=''
+          value={tempInput[path]}
+          id=''
+          onChange={handleChange}
+        />
       )}
       {type === InputType.dropdown && (
         <select>
