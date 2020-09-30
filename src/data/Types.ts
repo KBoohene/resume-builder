@@ -1,13 +1,9 @@
-export type SectionInterface = {
-  section?: SectionType;
+export const SectionType = {
+  profile: 'profile',
+  education: 'education',
+  projects: 'projects',
+  relevantCourses: 'relevantcourses',
+  achievements: 'achievements',
+  skills: 'skills',
+  work: 'work',
 };
-
-export enum SectionType {
-  profile,
-  education,
-  projects,
-  relevantCourses,
-  achievements,
-  skills,
-  work,
-}
