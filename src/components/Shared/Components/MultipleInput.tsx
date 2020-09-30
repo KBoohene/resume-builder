@@ -8,6 +8,8 @@ const MultipleInput = ({ type, path }: MultipleInputInterface) => {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
   ) => {
+    console.log(tempInput);
+    console.log(path);
     dispatch({
       type: 'on_input',
       payload: {
@@ -21,12 +23,12 @@ const MultipleInput = ({ type, path }: MultipleInputInterface) => {
     <div>
       {type === InputType.text && (
         <div>
-          <input type='text' value={tempInput[path]} onChange={handleChange} />
+          <input type='text' onChange={handleChange} />
         </div>
       )}
       {type === InputType.date && (
         <div>
-          <input type='date' value={tempInput[path]} onChange={handleChange} />
+          <input type='date' onChange={handleChange} />
         </div>
       )}
       {type === InputType.textarea && (
