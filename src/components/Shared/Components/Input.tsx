@@ -3,10 +3,10 @@ import { ResumeContext } from '../../../contexts/ResumeContext';
 import { InputInterface, InputType } from '../Types';
 
 const Input = ({ type, label, path }: InputInterface) => {
-  const { submit } = useContext(ResumeContext);
+  const { submitChange } = useContext(ResumeContext);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    submit({
+    submitChange({
       type: 'on_input',
       payload: {
         value: e.currentTarget.value,
