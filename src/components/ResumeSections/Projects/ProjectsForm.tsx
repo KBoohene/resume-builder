@@ -1,24 +1,33 @@
 import React from 'react';
-import Input from '../../Shared/Components/Input';
+import MultipleInput from '../../Shared/Components/MultipleInput';
+import AddItemButton from '../../Shared/Components/AddItemButton';
 import { InputType } from '../../Shared/Types';
+import { MultipleInputPath, ProjectPaths } from '../../../data/AppPaths';
 
 const ProjectsForm = () => {
   return (
     <div>
-      <Input
-        type={InputType.text}
-        label={'Title'}
-        value={''}
-        placeholder={''}
-      />
-      <Input
+      <h1>Project</h1>
+
+      <h2>Title</h2>
+      <MultipleInput type={InputType.text} path={ProjectPaths.Title} />
+
+      <h2>Description</h2>
+      <MultipleInput
         type={InputType.textarea}
-        label={'Description'}
-        value={''}
-        placeholder={''}
+        path={ProjectPaths.Description}
       />
-      <Input type={InputType.date} label={'From'} value={''} placeholder={''} />
-      <Input type={InputType.date} label={'To'} value={''} placeholder={''} />
+
+      <h2>From</h2>
+      <MultipleInput type={InputType.date} path={ProjectPaths.DurationFrom} />
+
+      <h2>To</h2>
+      <MultipleInput type={InputType.date} path={ProjectPaths.DurationTo} />
+      <AddItemButton
+        label={'Add Item'}
+        childPath={MultipleInputPath.Project}
+        parentPath={MultipleInputPath.Project}
+      />
     </div>
   );
 };
