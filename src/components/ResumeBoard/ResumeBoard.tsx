@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Education from './Sections/Education';
 import Profile from './Sections/Profile';
 import Skills from './Sections/Skills';
 import Course from './Sections/Course';
-import { SectionInterface, SectionType } from '../../data/Types';
+import { SectionType } from '../../data/Types';
 import Projects from './Sections/Projects';
 import Work from './Sections/Work';
+import { BuilderAppContext } from '../../contexts/BuilderAppContext';
 
-const ResumeBoard = ({ section = SectionType.projects }: SectionInterface) => {
+const ResumeBoard = () => {
+  const { sections } = useContext(BuilderAppContext);
   return (
     <div>
-      {section === SectionType.profile && <Profile />}
-      {section === SectionType.education && <Education />}
-      {section === SectionType.skills && <Skills />}
-      {section === SectionType.work && <Work />}
-      {section === SectionType.projects && <Projects />}
-      {section === SectionType.relevantCourses && <Course />}
+      {sections.section === SectionType.profile && <Profile />}
+      {sections.section === SectionType.education && <Education />}
+      {sections.section === SectionType.skills && <Skills />}
+      {sections.section === SectionType.work && <Work />}
+      {sections.section === SectionType.projects && <Projects />}
+      {sections.section === SectionType.relevantCourses && <Course />}
     </div>
   );
 };
