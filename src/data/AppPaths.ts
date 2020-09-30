@@ -23,8 +23,14 @@ export const EducationPaths = {
 };
 
 export const SkillsPath = 'skills';
+export const ProjectsPath = 'projects';
 
-export const SkillPath = 'skill';
+export const MultipleInputPath = {
+  Skill: 'skill',
+  Work: 'work',
+  Course: 'course',
+  Project: 'project',
+};
 
 export const WorkPaths = {
   Description: 'work.description',
@@ -33,6 +39,7 @@ export const WorkPaths = {
   Role: 'work.role',
   Country: 'work.address.country',
   City: 'work.address.city',
+  Company: 'work.company',
 };
 
 export const RelevantCoursesPaths = {
